@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(../images/lightbulb.jpg);
+    background-repeat: none;
+}
+
+
+/**********************************/
+/*********Navigation menu*********/
+/*********************************/
+.aya-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10%;
+}
+
+.aya-nav h2{
+    color: white;
+    font-weight: bolder;
+}
+
+.nav-ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-ul li a{
+    display: inline-block;
+    padding: 10px 2rem;
+    margin-left: .4rem;
+    text-decoration: none;
+    border: 2px solid white;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    .nav-ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-ul li {
+        margin: 2rem;
+    }
+    .nav-ul.show{
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
+
+/*************************/
+/****Countdown section****/
+/*************************/
+.content{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: gray;
+}
+
+.content h1{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15rem;
+    color: white;
+    font-size: 7rem;
+}
+
+.countdown{
+    color: white;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 767px){
+    .content h1{
+        font-size: 4rem;
+        margin-top: 6rem;
+    }
+
+    .countdown{
+        font-size: 1.5rem;
+    }
+}
