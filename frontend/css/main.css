@@ -1,10 +1,20 @@
 body{
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #222831;
+    background-color: #F2F6FF;
 }
 
+header{
+    background-color: #2B50AA;
+}
 
+.introductory-section{
+    background: linear-gradient(#2B50AA 65%, #F2F6FF 35%);
+}
+
+.bold{
+    font-weight: bold;
+}
 /**********************************/
 /*********Navigation menu*********/
 /*********************************/
@@ -34,11 +44,11 @@ body{
 }
 
 .nav-ul li a{
+    font-weight: bolder;
     display: inline-block;
     padding: 10px 2rem;
     margin-left: .4rem;
     text-decoration: none;
-    border-bottom: 2px solid white;
     font-family: 'Raleway', sans-serif;
     color: white;
 }
@@ -85,6 +95,37 @@ body{
 }
 
 
+/******************************/
+/**** Introductory section****/
+/*****************************/
+.introductory-section{
+    justify-content: space-between;
+    display: flex;
+    padding: 4% 10% 0;
+    margin-bottom: 4rem;
+}
+
+.call-to-action{
+    position: relative;
+}
+
+.call-to-action h1{
+    color: white;
+    font-weight: bolder;
+    font-size: 55px;
+}
+
+.call-to-action img{
+    width: 98%;
+    position: absolute;
+    top: 5rem;
+}
+
+.color-grading{
+    color: #CFA194;
+}
+
+
 /*************************/
 /****Countdown section****/
 /*************************/
@@ -117,4 +158,112 @@ body{
     .countdown{
         font-size: 1.5rem;
     }
+}
+
+
+
+/******************************/
+/****** Buy section ***********/
+/******************************/
+.form{
+    background-color: white;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 5%;
+    padding: 2%;
+    position: relative;
+}
+
+.tab-header{
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+}
+
+.tab-header div{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.tab-header .active{
+    border-bottom: 10px solid #2B50AA;
+    color: #2B50AA;
+    transition: all .3s ease-in-out;
+}
+
+.tab-body{
+    margin-top: 20px;
+}
+.tab-body input{
+    border: 2px solid transparent gray;
+    border-radius: 8px;
+    width: 95%;
+    height: 4em;
+    margin: 1em;
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 1%;
+}
+
+
+.tab-body button{
+    height: 4em;
+    margin-top: 10px;
+    margin: 1em;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #2B50AA;
+    width: 95%;
+    text-align: center;
+    align-items: center;
+}
+
+.tab-content > div .active{
+    display: block;
+}
+
+.tab-content > div {
+    display: none;
+}
+
+
+/**********************************/
+/***** what we offer section ******/
+/**********************************/
+.what-we-offer{
+    margin-top: 7rem; 
+}
+
+.coming-soon{
+    border-radius: 10px;
+    text-align: left;
+    align-items: center;
+    padding: 20px;
+}
+
+.coming-soon p{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.coming-soon li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.features-coming-soon{
+    background-color: #2B50AA;
+    border-radius: 8px;
+    color: white;
+}
+
+.platforms-coming-soon{
+    border-radius: 8px;
 }

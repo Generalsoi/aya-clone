@@ -1,4 +1,9 @@
 .aboutUs{
+    background-color: #2B50AA;
     color: white;
+    padding: 7% 10% 1%;
+}
+
+.aboutUsContent{
     padding: 7% 10%;
 }
