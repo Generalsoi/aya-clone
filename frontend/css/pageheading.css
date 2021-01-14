@@ -1,0 +1,42 @@
+body{
+    position: relative;
+}
+
+.page-heading{
+    background-color: #2B50AA;
+    color: white;
+    padding: 7% 10% 1%;
+}
+
+.page-heading h3{
+    font-weight: bolder;
+}
+
+.page-heading p{
+    opacity: 0.7;
+}
+/*********************/
+/*** social media ****/
+/*********************/
+.social-media{
+    position: absolute;
+    top: 24.5rem;
+    left: 7.5rem; 
+}
+.social-media li{
+    list-style-type: none;
+    margin: 1em;
+}
+
+.social-media li a i{
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+
+@media screen and (max-width: 767px){
+    .social-media{
+        display: none;
+    }
+}
+

@@ -1,9 +1,12 @@
-.aboutUs{
-    background-color: #2B50AA;
-    color: white;
-    padding: 7% 10% 1%;
-}
+
 
 .aboutUsContent{
-    padding: 7% 10%;
+    padding: 7% 20%;
+}
+
+
+@media screen and (max-width: 787px){
+    .aboutUsContent{
+        padding: 7% 2%;
+    }
 }

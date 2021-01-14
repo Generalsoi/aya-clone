@@ -1,8 +1,9 @@
 ///////////////////////
 // Responsive navbar //
 ///////////////////////
-const  hamburger = document.getElementById('hamburger');
-const navUl = document.getElementById('nav-ul');
+const  hamburger = document.querySelector('.hamburger');
+const navUl = document.querySelector('.nav-ul');
+const links = document.querySelector(".nav-ul li")
 
 hamburger.addEventListener('click', () => {
     navUl.classList.toggle('show');
@@ -63,7 +64,7 @@ let tabPanes = document.getElementsByClassName("tab-header")[0].getElementsByTag
 for (let i=0; i < tabPanes.length; i++){
     tabPanes[i].addEventListener('click',  power = function(){
         document.getElementsByClassName("tab-header")
-        [0].getElementsByClassName("active")[0].classList.remove('active');
+        [0].getElementsByClassName("active")[0].classList.remove('active'); 
 
     tabPanes[i].classList.add("active");
 
