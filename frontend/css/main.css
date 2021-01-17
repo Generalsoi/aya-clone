@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body{
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #F2F6FF;
 }
 
@@ -15,6 +17,8 @@ header{
 .bold{
     font-weight: bold;
 }
+
+
 
 
 /**********************************/
@@ -57,12 +61,7 @@ header{
     color: white;
 }
 
-/*.hamburger{
-    background-color: transparent;
-    color: white;
-    border: 0;
-    display: none;
-}*/
+
 
 @media screen and (max-width: 767px){
     nav{
@@ -114,6 +113,8 @@ header{
 }
 
 
+
+
 /******************************/
 /**** Introductory section****/
 /*****************************/
@@ -161,39 +162,91 @@ header{
 }
 
 
-/*************************/
-/****Countdown section****/
-/*************************/
-.content{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+
+
+
+/***************************************/
+/**** what we offer section ***********/
+/**************************************/
+.what-we-offer{
+  padding: 4% 10%;
+  background-color: #FFFFFF;  
 }
 
-.content h1{
-    align-items: center;
-    justify-content: center;
+.what-we-offer h5{
     text-align: center;
-    margin-top: 15rem;
-    color: white;
-    font-size: 7rem;
+    font-weight: bold;
+    margin-bottom: 56px;
 }
 
-.countdown{
-    color: white;
-    font-size: 3rem;
+.what-is-new{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.what-is-new-details p{
+    font-weight: lighter;
+    color: #919499;
+}
+
+.what-is-new-details h3{
+    font-weight: bold;
+}
+
+.what-is-new-details button{
+    height: 4.375rem;
+    width: 12.6875rem;
+    border: 1px solid #919499;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #919499;
+}
+
+.what-is-new-details button:hover{
+    background-color: #919499;
+    color: white;
+}
+
+.offers{
+    width: 30.5rem;
+    height: 11rem;
+    margin-bottom: 1.5rem;
+    padding: 2.0625rem 1.875rem;
+    border-radius: 10px;
+}
+
+.offers p{
+    margin-top: 0.5rem;
+    font-size: 14px;
+}
+
+.media{
+    display: flex;
+    justify-content: space-between;
+}
+
+.color1{background: linear-gradient(#97ABFF, #123597);}
+.color2{background: linear-gradient(#ABDCFF, #0396FF);}
+.color3{background: linear-gradient(#81FBB8, #28C76F);}
+.color1, .color2, .color3{color: white;}
 
 @media screen and (max-width: 767px){
-    .content h1{
-        font-size: 4rem;
-        margin-top: 6rem;
+    .what-we-offer{
+        padding: 4% 2%;
     }
 
-    .countdown{
-        font-size: 1.5rem;
+    .what-is-new-offers{
+        width: 100%;
+    }
+
+    .offers{
+        width: 100%;
     }
 }
+
 
 
 
@@ -209,28 +262,6 @@ header{
     position: relative;
 }
 
-/*.tab-header{
-    width: 100%;
-    height: 2.5rem;
-    display: flex;
-}
-
-.tab-header div{
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    align-items: center;
-    font-size: 22px;
-    background: transparent;
-    cursor: pointer;
-}
-
-.tab-header .active{
-    border-bottom: 10px solid #2B50AA;
-    color: #2B50AA;
-    transition: all .3s ease-in-out;
-}
-*/
 .tab-body{
     margin-top: 40px;
 }
@@ -263,13 +294,7 @@ header{
     align-items: center;
 }
 
-.tab-content > div .active{
-    display: block;
-}
 
-.tab-content > div {
-    display: none;
-}
 
 #tab-form{
     display: none;
@@ -310,46 +335,129 @@ header{
     
 }
 
-/**********************************/
-/***** what we offer section ******/
-/**********************************/
-.what-we-offer{
+
+
+
+
+/**************************************/
+/*** new payment options section ******/
+/**************************************/
+.new-payment-options{
     padding: 4% 10%;
-    margin-top: 7rem; 
+    background-color: #FFFFFF;
 }
 
-.coming-soon{
-    border-radius: 10px;
-    text-align: left;
+.new-payment-options-header{
+    text-align: center;
+    margin-bottom: 4.0625rem;
+}
+
+.new-payment-options-header h3{
+    font-weight: bold;
+}
+
+.new-payment-options-header p{
+    color: #919499;
+}
+
+.new-payment-options-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15% 3.1875rem;
+    text-align: center;
     align-items: center;
-    padding: 20px;
 }
 
-.coming-soon p{
-    text-transform: uppercase;
-    margin-bottom: 20px;
+.new-payment-options-list i{
+    margin-bottom: 1rem;
 }
 
-.coming-soon li{
-    list-style-type: none;
-    margin-bottom: 15px;
-}
-
-.features-coming-soon{
-    background-color: #2B50AA;
-    border-radius: 8px;
-    color: white;
-}
-
-.platforms-coming-soon{
-    border-radius: 8px;
+.new-payment-options-list img{
+    width: 12%;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 767px){
-    .what-we-offer{
+    .new-payment-options{
         padding: 4% 2%;
     }
+
+    .new-payment-options-list{
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 2% 2%;
+    }
+
+    .new-payment-options-list p{
+        margin-bottom: 2rem;
+    }
 }
+
+
+
+/*********************************/
+/*** failed transactions ********/
+/********************************/
+.failed-transactions{
+    padding: 4% 10%;
+    position: relative;
+}
+
+.failed-transactions img{
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+}
+
+.failed-transactions-content{
+    background: linear-gradient(#FEB692, #EA5455);
+    height: 21rem;
+    padding: 4%;
+    color: white;
+    border-radius: 10px;
+}
+
+.failed-transactions-content h3{
+    font-weight: bold;
+}
+
+.failed-transactions-content button{
+    border: none;
+    border-radius: 10px;
+    width: 17.8125rem;
+    height: 4.375rem;
+    background-color: #F9D0C8;
+    color: white;
+}
+
+.failed-transactions-content button:hover{
+    background: linear-gradient(#FEB692, #EA5455);
+}
+
+@media screen and (max-width: 767px){
+    .failed-transactions{
+        padding: 4% 2%;
+    }
+
+    .failed-transactions-content{
+        padding: 3%;
+        height: 24rem;
+        width: 100%;
+    }
+
+    .failed-transactions img{
+        display: none;
+    };
+
+    .failed-transactions-content button{
+        height: 1rem;
+        width: 100%;
+    }
+}
+
+
+
 
 
 /*********************************/
@@ -427,3 +535,81 @@ header{
         margin-top: 1em;
     }
 }
+
+
+
+
+
+
+/*******************************/
+/**** successful payment *******/
+/*******************************/
+.successful-payment{
+    padding-top: 7%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+}
+
+.successful-payment p{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.successful-payment button{
+    font-size: 1rem;
+    padding: 2%;
+    border: none;
+    border-radius: 8px;
+    background-color: #2B50AA;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/**********************************/
+/***** what we offer section ******/
+/**********************************/
+/*.what-we-offer{
+    padding: 4% 10%;
+    margin-top: 7rem; 
+}
+
+.coming-soon{
+    border-radius: 10px;
+    text-align: left;
+    align-items: center;
+    padding: 20px;
+}
+
+.coming-soon p{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.coming-soon li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.features-coming-soon{
+    background-color: #2B50AA;
+    border-radius: 8px;
+    color: white;
+}
+
+.platforms-coming-soon{
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 767px){
+    .what-we-offer{
+        padding: 4% 2%;
+    }
+}*/

@@ -20,31 +20,7 @@
 </head>
 <body>
     <header> 
-        <!--<nav class="navbar navbar-expand-lg aya-nav">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Buy</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="blog.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resolveissues.html">Resolve Issues </a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </nav>-->
+    
         <nav class="aya-nav">
             <a href="index.html" class="logoName"><h2>Aya</h2></a>
             <div class="hamburger">
@@ -52,9 +28,7 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <!--<button class="hamburger" id="hamburger">
-                <i class="fas fa-bars fa-2x"></i>
-            </button>-->
+            
             <ul class="nav-ul" id="nav-ul">
                 <li><a href="index.html">Recharge</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -73,15 +47,6 @@
         
 
         <div class="form">
-            <!--<div class="tab-header" id="buy-options">
-                <div class="active">
-                    Power
-                </div>
-                <div>
-                    Airtime
-                </div>
-            </div>-->
-
             <div class="tab-content">
                 <div class="tab-body active" id="tab-body" >
                     <form action="" id="form-body">
@@ -97,7 +62,7 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <select name="payment" id="payment-option">
-                                    <option value="payment-option">Bank Card</option>
+                                    <option value="payment-option"> <i class="far fa-credit-card"></i> Bank Card</option>
                                     <option value="payment-option">Transfer</option>
                                 </select>
                             </div>
@@ -106,28 +71,6 @@
                     </form>
                     
                 </div>
-
-                
-                <!--<div class="tab-body">
-                    <form action="">
-                        <input type="tel" name="phone" id="phone2" placeholder="Enter Phone number: e.g 08134567890" pattern="[0-9]{11}">
-                        <div class="form-row">
-                            <div class="form-group col-lg-6">
-                                <input type="text" placeholder="Amount">
-                            </div>
-                            <div class="form-group col-lg-6" >
-                                <select name="payment" id="payment-option">
-                                    <option value="payment-option">Bank Card</option>
-                                    <option value="payment-option">Transfer</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit">Proceed <i class="far fa-arrow-alt-circle-right"></i></button>
-                    </form>
-                    
-                    
-                    
-                </div>-->
             </div>
 
             <div class="tab-body" id="tab-form">
@@ -139,6 +82,82 @@
         </div>
     </section>
 
+    <section class="what-we-offer">
+        <h5>What we offer</h5>
+        <div class="what-is-new">
+            <div class="what-is-new-details">
+                <p>INTRODUCING</p>
+                <h3>An Easier Way To Recharge</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>At pariatur labore illum molestiae quia et modi magni libero laborum quis? <br> Corporis aliquam vitae labore quos doloribus nisi impedit. Voluptatibus, asperiores.</p>
+                <a href=""><button>Learn More</button></a>
+            </div>
+
+            <div class="what-is-new-offers">
+                <div class="offers color1">
+                    <div class="media">
+                        <h4>Microsoft Teams</h4>
+                        <img src="https://img.icons8.com/color/48/000000/microsoft-teams.png"/>
+                    </div>
+                    <p>Pay your bills by simply talking to us</p>
+                    <i class="fas fa-long-arrow-alt-right fa-2x"></i>
+                </div>
+                <div class="offers color2">
+                    <div class="media">
+                        <h4>Telegram</h4>
+                        <i class="fab fa-telegram-plane fa-2x"></i>
+                    </div>
+                    <p>Pay your bills by simply talking to us</p>
+                    <i class="fas fa-long-arrow-alt-right fa-2x"></i>
+                </div>
+                <div class="offers color3">
+                    <div class="media">
+                        <h4>Whatsapp</h4>
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </div>
+                    <p>Pay your bills by simply talking to us</p>
+                    <i class="fas fa-long-arrow-alt-right fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section class="new-payment-options">
+        <div class="new-payment-options-header">
+           <h3>New Payment Options</h3>
+            <p>Pay your electricity bills using cryptocurrency directly from your wallet</p> 
+        </div>
+        
+        <div class="new-payment-options-list">
+            <div>
+                <i class="fab fa-bitcoin fa-2x"></i>
+                <p>Pay with BITCOIN</p>
+            </div>
+            <div>
+                <i class="fab fa-ethereum fa-2x"></i>
+                <p>Pay with ETHEREUM</p>
+            </div>
+            <div>
+                <img src="./images/bnb.svg" alt="bnb icon">
+                <p>Pay with BNB</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="failed-transactions">
+        <div class="failed-transactions-content">
+            <h3>Failed Transactions?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Blanditiis omnis saepe enim assumenda, vero earum. <br>
+                Iure ea, velit cupiditate incidunt error praesentium vitae <br> exercitationem quod ex? 
+                Enim corporis similique vero.
+            </p>
+            <a href=""><button>Resolve Issues</button></a>
+        </div>
+        <img src="./images/cube 1.png" alt="">
+    </section>
+    
+
+    <!--
     <section class="what-we-offer">
         
             <div class="row anticipate">
@@ -216,30 +235,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="row">
-                        <div class="col-sm-6 features-coming-soon">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title"> Crypto payment(coming soon)</h3>
-                                    <p class="card-text"> Lorem ipsum dolor sit amet consectetur </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 features-coming-soon">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title"> Speed</h3>
-                                    <p class="card-text"> Lorem ipsum dolor sit amet consectetur </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         
 
-    </section>
+    </section> -->
 
     <div class="footer">
         <div class="footer-content">

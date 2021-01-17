@@ -37,7 +37,7 @@ function makePayment() {
     country: "NG",
     payment_options: "card, mobilemoneyghana, ussd",
     redirect_url: // specified redirect URL
-        "https://callbacks.piedpiper.com/flutterwave.aspx?ismobile=34",
+        "./successful.html",
     meta: {
         consumer_id: 23,
         consumer_mac: "92a3-912ba-1192a",
@@ -54,9 +54,9 @@ function makePayment() {
         // close modal
     },
     customizations: {
-        title: "My store",
-        description: "Payment for items in cart",
-        logo: "https://assets.piedpiper.com/logo.png",
+        title: "Aya",
+        description: "Payment for utility bills",
+        //logo: "https://assets.piedpiper.com/logo.png",
     },
     });
 }
