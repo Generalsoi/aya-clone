@@ -1,0 +1,42 @@
+/**************************************/
+/**** blog contents *******************/
+/**************************************/
+section{
+    margin-bottom: 4rem;
+    padding: 4% 25%;
+}
+
+.blog-contents{
+    width: 46.375rem;
+    height: 34.3125rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.blog-contents button{
+    width: 107px;
+    height: 44px;
+    border: 1px solid #919499;
+    border-radius: 10px;
+}
+
+.blog-contents button:hover{
+    background-color: #919499;
+    color: white;
+}
+
+@media screen and (max-width: 767px){
+    section{
+        padding: 7% 2%;
+        margin-bottom: 2rem;
+    }
+
+    .blog-contents{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .blog-contents img{
+        width: 100%;
+    }
+}

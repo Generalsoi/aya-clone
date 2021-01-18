@@ -6,10 +6,12 @@ body{
     background-color: #2B50AA;
     color: white;
     padding: 7% 10% 1%;
+    text-align: center;
 }
 
 .page-heading h3{
     font-weight: bolder;
+    font-size: 48px;
 }
 
 .page-heading p{
