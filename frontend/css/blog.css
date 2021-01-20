@@ -1,8 +1,9 @@
 /**************************************/
 /**** blog contents *******************/
 /**************************************/
-section{
-    margin-bottom: 4rem;
+.blog-section{
+    margin-bottom: 32
+    px;
     padding: 4% 25%;
 }
 
@@ -17,7 +18,8 @@ section{
     width: 107px;
     height: 44px;
     border: 1px solid #919499;
-    border-radius: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .blog-contents button:hover{
@@ -25,15 +27,31 @@ section{
     color: white;
 }
 
-@media screen and (max-width: 767px){
-    section{
+.page-shuffle{
+    padding: 1% 25%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.page-shuffle button{
+    width: 128px;
+    height: 44px;
+    border: 1px solid #2B50AA;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 16px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 808px){
+    .blog-section{
         padding: 7% 2%;
-        margin-bottom: 2rem;
     }
 
     .blog-contents{
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 20px;
     }
 
     .blog-contents img{

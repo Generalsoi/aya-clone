@@ -65,7 +65,7 @@ header{
 
 
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     nav{
         position: relative;
     }
@@ -138,28 +138,37 @@ header{
 }
 
 .call-to-action img{
-    width: 98%;
+    width: 736px;
+    height: 725px;
     position: absolute;
-    top: 5rem;
+    top: 0.5px;
+    left: 2rem;
+    transform: matrix(1, 0, 0, 1, 0, 1);
 }
+
 
 .color-grading{
     color: #8493B6;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     .introductory-section{
         flex-wrap: wrap;
         padding: 4% 2%
     }
 
+    .call-to-action{
+        margin-bottom: 4rem;
+    }
     .call-to-action h1{
         font-size: 30px;
-        margin-bottom: 7rem;
     }
 
     .call-to-action img{
-        top: 2rem;
+        width: 100%;
+        height: 500px;
+        top: 5px;
+        left: 50%;
     }
 }
 
@@ -258,57 +267,67 @@ header{
 .form{
     background-color: white;
     width: 36.9375rem;
-    height: 42.3125rem;
+    height: 35.875rem;
     border-radius: 5%;
-    padding: 2%;
+    padding-top: 3rem;
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-bottom: 3rem;
     position: relative;
 }
 
-.tab-body{
-    margin-top: 40px;
-}
 .tab-body input, select{
-    border: 0.5px solid gray;
+    border: 0.5px solid #C4C4C4;
     border-radius: 8px;
-    width: 95%;
+    width: 100%;
     height: 4.375em;
-    margin: 1em;
-    margin-top: 10px;
+    margin-bottom: 32px;
     font-size: 1rem;
-    padding: 3%;
+    padding: 23px 32px;
 }
 
 .tab-body .form-group input, .tab-body .form-group select{
-    width: 90%;
-    padding: 3%;
+    width: 100%;
+    padding: 23px 32px;
 }
 .tab-body button{
     height: 4em;
-    margin-top: 10px;
-    margin: 1em;
-    color: white;
+    color: #919499;
+    font-size: 18px;
+    font-weight: bold;
     border-radius: 8px;
-    border: none;
+    border: 0.5px solid #c4c4c4;
     outline: none;
-    background-color: #2B50AA;
-    width: 95%;
+    background-color: #F8FAFF;
+    width: 100%;
     text-align: center;
     align-items: center;
 }
 
+#dist-company{
+    background-color: #FFFFFF;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
+    -webkit-appearance: none;
+}
+
+#payment-option{
+    background-color: #FFFFFF;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 80% center;
+    -webkit-appearance: none;
+}
 
 
 #tab-form{
     display: none;
 }
 
-@media screen and (max-width: 767px){
-    .tab-header div{
-        font-size: 18px;
+@media screen and (max-width: 808px){
+    .form{
+        padding-top: 2rem;
     }
 
-    .tab-body{
-        margin-top: 1.48875rem;
+    .tab-header div{
+        font-size: 18px;
     }
 
     .tab-body input, select, button{
@@ -334,6 +353,9 @@ header{
         height: 26.8rem;
     }
 
+    #dist-company, #payment-option{
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
+    }
     
 }
 
@@ -481,6 +503,7 @@ header{
     color: white;
     font-weight: bolder;
     font-size: large;
+    margin-bottom: 32px;
 }
 
 .footer-content ul{
@@ -490,6 +513,7 @@ header{
 .footer-content ul li{
     list-style-type: none;
     text-indent: 0;
+    margin-bottom: 16px;
 }
 
 .footer-content ul li a{
@@ -512,15 +536,17 @@ header{
 }
 
 .footer-content input{
+    width: 285px;
+    height: 70px;
     border: none;
     border-radius: 8px;
     margin-bottom: 1rem;
-    width: 100%;
     padding-left: 2em;
 }
 
 .footer-content button{
-    width: 100%;
+    width: 285px;
+    height: 70px;
     border: none;
     border-radius: 8px;
     background-color: #2B50AA;
