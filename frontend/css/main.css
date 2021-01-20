@@ -244,7 +244,7 @@ header{
 .color3{background: linear-gradient(#81FBB8, #28C76F);}
 .color1, .color2, .color3{color: white;}
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     .what-we-offer{
         padding: 4% 2%;
     }
@@ -402,7 +402,7 @@ header{
     margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     .new-payment-options{
         padding: 4% 2%;
     }
@@ -459,7 +459,7 @@ header{
     background: linear-gradient(#FEB692, #EA5455);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     .failed-transactions{
         padding: 4% 2%;
     }
@@ -553,7 +553,7 @@ header{
     color: white;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     .footer{
         padding: 7% 2% 4%;
         flex-direction: column;
@@ -593,51 +593,3 @@ header{
     color: white;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-/**********************************/
-/***** what we offer section ******/
-/**********************************/
-/*.what-we-offer{
-    padding: 4% 10%;
-    margin-top: 7rem; 
-}
-
-.coming-soon{
-    border-radius: 10px;
-    text-align: left;
-    align-items: center;
-    padding: 20px;
-}
-
-.coming-soon p{
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.coming-soon li{
-    list-style-type: none;
-    margin-bottom: 15px;
-}
-
-.features-coming-soon{
-    background-color: #2B50AA;
-    border-radius: 8px;
-    color: white;
-}
-
-.platforms-coming-soon{
-    border-radius: 8px;
-}
-
-@media screen and (max-width: 767px){
-    .what-we-offer{
-        padding: 4% 2%;
-    }
-}*/
