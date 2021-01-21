@@ -36,6 +36,10 @@
     color: white;
 }
 
+.optional{
+    color: #919499;
+}
+
 @media screen and (max-width: 808px){
     .nav-ul{
         background-color: #EB5757;
