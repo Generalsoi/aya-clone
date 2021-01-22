@@ -11,6 +11,8 @@
 
     <!--css links-->
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/pageheading.css">
+    <link rel="stylesheet" href="./css/contact.css">
 
     <!--fontawesome cdn-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -22,20 +24,83 @@
     <header> 
         <nav class="aya-nav">
             <a href="index.html" class="logoName"><h2>Aya</h2></a>
-            <button class="hamburger" id="hamburger">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!--<button class="hamburger" id="hamburger">
                 <i class="fas fa-bars fa-2x"></i>
-            </button>
+            </button>-->
             <ul class="nav-ul" id="nav-ul">
-                <li><a href="index.html">Buy</a></li>
+                <li><a href="index.html">Recharge</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="resolveissues.html">Resolve Issues</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    
+    <div class="page-heading">
+        <h3>Contact Us</h3>
+        <p>Have Any Enquiries? You Can Reach Out To Us.</p>
+    </div>
+    <div class="social-media">
+        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+        <li><a href=""><i class="fab fa-twitter "></i></a></li>
+        <li><a href=""><i class="fab fa-whatsapp "></i></a></li>
+    </div>
 
+    <div class="contact">
+        <form action="">
+            <label for="email">Email address</label> <br>
+            <input type="email" id="email" placeholder="e.g xyz@gmail.com">
+            <br>
+            <label for="question">Question</label> <br>
+            <input type="text" name="question" id="question" placeholder="Please enter your question">
+            <p>There is a possibility your question has been answered before. Check <a href="">FAQs</a></p>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-content">
+            <h6>Products</h6>
+            <ul>
+                <li><a href="">Buy Electricity</a></li>
+                <li><a href="">Buy Airtime</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">FAQs</a></li>
+                <li><a href="">Pay with crypto (coming soon)</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-content">
+            <h6>Company</h6>
+            <ul>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Terms of use</a></li>
+                <li><a href="">Privacy Policy</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-social-media">
+                <h6>AYA</h6>
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter "></i></a></li>
+                    <li><a href=""><i class="fab fa-whatsapp "></i></a></li>
+                </ul>
+            </div>
+            <p>Stay up to date with us</p>
+            <input type="text" placeholder="Email address"> <br>
+            <button type="submit">Subscribe</button>
+        </div>
+    </div>
 
 
 
