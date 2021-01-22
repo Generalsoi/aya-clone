@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Salsa&display=swap');
+
 body{
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #F2F6FF;
 }
 
@@ -15,6 +17,8 @@ header{
 .bold{
     font-weight: bold;
 }
+
+
 
 
 /**********************************/
@@ -36,6 +40,8 @@ header{
 .aya-nav h2{
     color: white;
     font-weight: bolder;
+    font-family: 'Salsa', cursive;
+    text-transform: uppercase;
 }
 
 .nav-ul{
@@ -57,14 +63,9 @@ header{
     color: white;
 }
 
-/*.hamburger{
-    background-color: transparent;
-    color: white;
-    border: 0;
-    display: none;
-}*/
 
-@media screen and (max-width: 767px){
+
+@media screen and (max-width: 808px){
     nav{
         position: relative;
     }
@@ -114,6 +115,8 @@ header{
 }
 
 
+
+
 /******************************/
 /**** Introductory section****/
 /*****************************/
@@ -135,65 +138,139 @@ header{
 }
 
 .call-to-action img{
-    width: 98%;
+    width: 736px;
+    height: 725px;
     position: absolute;
-    top: 5rem;
+    top: 0.5px;
+    left: 2rem;
+    transform: matrix(1, 0, 0, 1, 0, 1);
 }
+
 
 .color-grading{
-    color: #CFA194;
+    color: #8493B6;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     .introductory-section{
         flex-wrap: wrap;
         padding: 4% 2%
     }
 
+    .call-to-action{
+        margin-bottom: 4rem;
+    }
     .call-to-action h1{
         font-size: 30px;
-        margin-bottom: 7rem;
     }
 
     .call-to-action img{
-        top: 2rem;
+        width: 100%;
+        height: 500px;
+        top: 5px;
+        left: 50%;
     }
 }
 
 
-/*************************/
-/****Countdown section****/
-/*************************/
-.content{
-    justify-content: center;
-    align-items: center;
+
+
+
+
+/***************************************/
+/**** what we offer section ***********/
+/**************************************/
+.what-we-offer{
+  padding: 4% 10%;
+  background-color: #FFFFFF;  
+  position: relative;
+}
+
+.energy-img{
+    position: absolute;
+    top: 6%;
+    left: 48%;
+    z-index: 1;
+}
+
+.what-we-offer h5{
     text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 56px;
 }
 
-.content h1{
+.what-is-new{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 15rem;
-    color: white;
-    font-size: 7rem;
 }
 
-.countdown{
-    color: white;
-    font-size: 3rem;
+.what-is-new-details p{
+    font-weight: lighter;
+    color: #919499;
 }
 
-@media screen and (max-width: 767px){
-    .content h1{
-        font-size: 4rem;
-        margin-top: 6rem;
+.what-is-new-details h3{
+    font-weight: bold;
+}
+
+.what-is-new-details button{
+    height: 4.375rem;
+    width: 12.6875rem;
+    border: 1px solid #919499;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #919499;
+}
+
+.what-is-new-details button:hover{
+    background-color: #919499;
+    color: white;
+}
+
+.offers{
+    width: 30.5rem;
+    height: 11rem;
+    margin-bottom: 1.5rem;
+    padding: 2.0625rem 1.875rem;
+    border-radius: 10px;
+}
+
+.offers p{
+    margin-top: 0.5rem;
+    font-size: 14px;
+}
+
+.media{
+    display: flex;
+    justify-content: space-between;
+}
+
+.color1{background: linear-gradient(#97ABFF, #123597);}
+.color2{background: linear-gradient(#ABDCFF, #0396FF);}
+.color3{background: linear-gradient(#81FBB8, #28C76F);}
+.color1, .color2, .color3{color: white;}
+
+@media screen and (max-width: 808px){
+    .what-we-offer{
+        padding: 4% 2%;
     }
 
-    .countdown{
-        font-size: 1.5rem;
+    .what-is-new-offers{
+        width: 100%;
+    }
+
+    .offers{
+        width: 100%;
+    }
+
+    .energy-img{
+        top: 1%;
     }
 }
+
 
 
 
@@ -203,81 +280,67 @@ header{
 .form{
     background-color: white;
     width: 36.9375rem;
-    height: 42.3125rem;
+    height: 35.875rem;
     border-radius: 5%;
-    padding: 2%;
+    padding-top: 3rem;
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-bottom: 3rem;
     position: relative;
 }
 
-.tab-header{
-    width: 100%;
-    height: 2.5rem;
-    display: flex;
-}
-
-.tab-header div{
-    width: 50%;
-    height: 100%;
-    text-align: center;
-    align-items: center;
-    font-size: 22px;
-    background: transparent;
-    cursor: pointer;
-}
-
-.tab-header .active{
-    border-bottom: 10px solid #2B50AA;
-    color: #2B50AA;
-    transition: all .3s ease-in-out;
-}
-
-.tab-body{
-    margin-top: 40px;
-}
 .tab-body input, select{
-    border: 0.5px solid gray;
+    border: 0.5px solid #C4C4C4;
     border-radius: 8px;
-    width: 95%;
+    width: 100%;
     height: 4.375em;
-    margin: 1em;
-    margin-top: 10px;
+    margin-bottom: 32px;
     font-size: 1rem;
-    padding: 3%;
+    padding: 23px 32px;
 }
 
 .tab-body .form-group input, .tab-body .form-group select{
-    width: 90%;
-    padding: 3%;
+    width: 100%;
+    padding: 23px 32px;
 }
 .tab-body button{
     height: 4em;
-    margin-top: 10px;
-    margin: 1em;
-    color: white;
+    color: #919499;
+    font-size: 18px;
+    font-weight: bold;
     border-radius: 8px;
-    border: none;
+    border: 0.5px solid #c4c4c4;
     outline: none;
-    background-color: #2B50AA;
-    width: 95%;
+    background-color: #F8FAFF;
+    width: 100%;
     text-align: center;
     align-items: center;
 }
 
-.tab-content > div .active{
-    display: block;
+#dist-company{
+    background-color: #FFFFFF;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
+    -webkit-appearance: none;
 }
 
-.tab-content > div {
+#payment-option{
+    background-color: #FFFFFF;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 80% center;
+    -webkit-appearance: none;
+}
+
+
+#tab-form{
     display: none;
 }
 
-@media screen and (max-width: 767px){
-    .tab-header div{
-        font-size: 18px;
+@media screen and (max-width: 808px){
+    .form{
+        padding-top: 2rem;
     }
 
-    .tab-body{
-        margin-top: 1.48875rem;
+    .tab-header div{
+        font-size: 18px;
     }
 
     .tab-body input, select, button{
@@ -303,49 +366,135 @@ header{
         height: 26.8rem;
     }
 
+    #dist-company, #payment-option{
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
+    }
     
 }
 
-/**********************************/
-/***** what we offer section ******/
-/**********************************/
-.what-we-offer{
+
+
+
+
+/**************************************/
+/*** new payment options section ******/
+/**************************************/
+.new-payment-options{
     padding: 4% 10%;
-    margin-top: 7rem; 
+    background-color: #FFFFFF;
 }
 
-.coming-soon{
-    border-radius: 10px;
-    text-align: left;
+.new-payment-options-header{
+    text-align: center;
+    margin-bottom: 4.0625rem;
+}
+
+.new-payment-options-header h3{
+    font-weight: bold;
+}
+
+.new-payment-options-header p{
+    color: #919499;
+}
+
+.new-payment-options-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15% 3.1875rem;
+    text-align: center;
     align-items: center;
-    padding: 20px;
 }
 
-.coming-soon p{
-    text-transform: uppercase;
-    margin-bottom: 20px;
+.new-payment-options-list i{
+    margin-bottom: 1rem;
 }
 
-.coming-soon li{
-    list-style-type: none;
-    margin-bottom: 15px;
+.new-payment-options-list img{
+    width: 12%;
+    margin-bottom: 1rem;
 }
 
-.features-coming-soon{
-    background-color: #2B50AA;
-    border-radius: 8px;
+@media screen and (max-width: 808px){
+    .new-payment-options{
+        padding: 4% 2%;
+    }
+
+    .new-payment-options-list{
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 2% 2%;
+    }
+
+    .new-payment-options-list p{
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+/*********************************/
+/*** failed transactions ********/
+/********************************/
+.failed-transactions{
+    padding: 4% 10%;
+    position: relative;
+}
+
+.failed-transactions img{
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+}
+
+.failed-transactions-content{
+    background: linear-gradient(#FEB692, #EA5455);
+    height: 21rem;
+    padding: 4%;
+    color: white;
+    border-radius: 10px;
+}
+
+.failed-transactions-content h3{
+    font-weight: bold;
+}
+
+.failed-transactions-content button{
+    border: none;
+    border-radius: 10px;
+    width: 17.8125rem;
+    height: 4.375rem;
+    background-color: #F9D0C8;
     color: white;
 }
 
-.platforms-coming-soon{
-    border-radius: 8px;
+.failed-transactions-content button:hover{
+    background: linear-gradient(#FEB692, #EA5455);
 }
 
-@media screen and (max-width: 767px){
-    .what-we-offer{
+@media screen and (max-width: 808px){
+    .failed-transactions{
         padding: 4% 2%;
     }
+
+    .failed-transactions-content{
+        padding: 3%;
+        height: 24rem;
+        width: 100%;
+    }
+
+    .failed-transactions img{
+        display: none;
+    };
+
+    .failed-transactions-content button{
+        height: 1rem;
+        width: 100%;
+    }
 }
+
+
+
 
 
 /*********************************/
@@ -367,6 +516,7 @@ header{
     color: white;
     font-weight: bolder;
     font-size: large;
+    margin-bottom: 32px;
 }
 
 .footer-content ul{
@@ -376,6 +526,7 @@ header{
 .footer-content ul li{
     list-style-type: none;
     text-indent: 0;
+    margin-bottom: 16px;
 }
 
 .footer-content ul li a{
@@ -398,22 +549,24 @@ header{
 }
 
 .footer-content input{
+    width: 285px;
+    height: 70px;
     border: none;
     border-radius: 8px;
     margin-bottom: 1rem;
-    width: 100%;
     padding-left: 2em;
 }
 
 .footer-content button{
-    width: 100%;
+    width: 285px;
+    height: 70px;
     border: none;
     border-radius: 8px;
     background-color: #2B50AA;
     color: white;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 808px){
     .footer{
         padding: 7% 2% 4%;
         flex-direction: column;
@@ -422,4 +575,34 @@ header{
     .footer-content{
         margin-top: 1em;
     }
+}
+
+
+
+
+
+
+/*******************************/
+/**** successful payment *******/
+/*******************************/
+.successful-payment{
+    padding-top: 7%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+}
+
+.successful-payment p{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.successful-payment button{
+    font-size: 1rem;
+    padding: 2%;
+    border: none;
+    border-radius: 8px;
+    background-color: #2B50AA;
+    color: white;
+    cursor: pointer;
 }
