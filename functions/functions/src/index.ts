@@ -17,8 +17,8 @@ const axiosinstance: any = axios.create({
 })
 
 const client = new twilio("AC7a900b2dff4cb9ff03b88bad21a1e5cd", "2dfc051b2ae446bf28ca55387b5c3a98");
-const flw = new Flutterwave("FLWPUBK_TEST-351dd01dec710a2ffd31d615fbd2c783-X", "FLWSECK_TEST-41359ee595a0022b0f0c50c8e82129cf-X");
-//const flw = new Flutterwave("FLWPUBK-38626af23dbc1835ba40010a382ce254-X", "FLWSECK-c148d536910a9a9703c849c70509b7ad-X");
+//const flw = new Flutterwave("FLWPUBK_TEST-351dd01dec710a2ffd31d615fbd2c783-X", "FLWSECK_TEST-41359ee595a0022b0f0c50c8e82129cf-X");
+const flw = new Flutterwave("FLWPUBK-38626af23dbc1835ba40010a382ce254-X", "FLWSECK-c148d536910a9a9703c849c70509b7ad-X");
 const db = admin.firestore();
 
 
@@ -47,14 +47,18 @@ export const validateMeter = functions.https.onRequest((request,response) => {
 
 export const buyPower = functions.https.onRequest((request,response) => {
     let requestBody = request.body
+    functions.logger.info("AYA","Request body is "+requestBody.txref)
     db.collection("transactions").doc(requestBody.txref).get().then((doc:any) => {
-        functions.logger.info("AYA","returned from transaction fetch: "+ doc.exists)
+        functions.logger.info("AYA: ","returned from transaction fetch: "+ doc.exists)
         if(doc.exists){
             if(doc.data().status == "successful" ) response.status(400).send("Unable to complete this operation because value has already been retrieved")
         }else{
-            flw.VerifyTransaction.verify({txref:requestBody.txref}).then((res:any) => {
+            functions.logger.info("AYA: ","identity: "+ requestBody.txref)
+            flw.Transaction.verify({id:requestBody.txref}).then((res:any) => {
+                functions.logger.info("AYA: ","FLW response: "+JSON.stringify(res,null,4))
                 if(res.status!="success")response.status(400).send("transaction not found")
                 if(res.data.amount==requestBody.amount&&res.data.currency==requestBody.currency){
+                    functions.logger.info("AYA: ","Doing actual pay since amount match: "+res.data.amount)
                     axiosinstance.post("pay",{
                         request_id:requestBody.txref,//"15536627839",
                         billersCode:requestBody.meterNumber,//"0124000937787",
@@ -64,6 +68,7 @@ export const buyPower = functions.https.onRequest((request,response) => {
                         phone:requestBody.phoneNumber//"08131058329"
                     })
                     .then((res:any) => {
+                        functions.logger.info("AYA: ","Pay from VITA returned: "+res.data)
                         const transaction = {
                             amount:requestBody.amount,
                             meterNumber:requestBody.meterNumber,
@@ -73,24 +78,36 @@ export const buyPower = functions.https.onRequest((request,response) => {
                             messageId:""
                         }
                         if(res.data.code=="000"){
+                            functions.logger.info("AYA: ","Pay from VITA SUCCESS: "+res.data)
                             sendSMS(res.data.purchased_code,requestBody.phoneNumber)
                             .then((messageSID:string) =>{
+                                functions.logger.info("AYA: ","Send SMS success: ")
                                 transaction.messageId = messageSID
+                                db.collection("transactions").doc(requestBody.txref).set(transaction)
                                 response.status(200).send({billData:res.data,messageDelivered:true,messageId:messageSID})
                             })
-                            .catch((e:any) => response.status(400).send({billData:res.data,messageDelivered:false,messageId:e.message}))
+                            .catch((e:any) => {
+                                functions.logger.info("AYA: ","Send SMS failed: ")
+                                response.status(400).send({billData:res.data,messageDelivered:false,messageId:e.message})
+                            });
                         }else{
+                            functions.logger.info("AYA: ","Pay from VITA NOT SUCCESSFUL: ")
                             response.status(400).send(res.data)
                         }
                     })
-                    .catch((e:any) => response.status(400).send(e.message))
+                    .catch((e:any) => {
+                        functions.logger.info("AYA: ","Pay from VITA FAILED: "+e)
+                        response.status(400).send(e.message)
+                    })
                 }
                 else{
+                    functions.logger.info("AYA: ","Fluterwave trasaction amounts dont match ")
                     response.status(400).send("unable to verify this transaction")
                 }
             })
             .catch((e:any) => {
-                response.status(400).send(e)
+                functions.logger.info("AYA: ","Flutterwave transaction failed")
+                response.status(400).send(e.message)
             })
         }
     })
