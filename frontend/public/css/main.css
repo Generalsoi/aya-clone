@@ -165,10 +165,7 @@ header{
     }
 
     .call-to-action img{
-        width: 100%;
-        height: 500px;
-        top: 5px;
-        left: 50%;
+        display: none;
     }
 }
 
@@ -293,6 +290,7 @@ header{
     border: 0.5px solid #C4C4C4;
     border-radius: 8px;
     width: 100%;
+    color: #14110F;
     height: 4.375em;
     margin-bottom: 32px;
     font-size: 1rem;
@@ -303,7 +301,7 @@ header{
     width: 100%;
     padding: 23px 32px;
 }
-.tab-body button{
+.tab-body button, #payment-details button{
     height: 4em;
     color: #919499;
     font-size: 18px;
@@ -329,8 +327,15 @@ header{
     -webkit-appearance: none;
 }
 
+.optIon{
+    color: #14110F;
+}
 
 #tab-form{
+    display: none;
+}
+
+#payment-details{
     display: none;
 }
 
@@ -351,7 +356,7 @@ header{
         font-size: 0.8rem;
     }
 
-    .tab-body button{
+    .tab-body button, #payment-details button{
         height: 2.605625rem;
         margin: 0;
         width: 100%;
@@ -368,9 +373,11 @@ header{
 
     #dist-company, #payment-option{
         background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
+        background-color: none;
     }
     
 }
+
 
 
 

@@ -51,10 +51,15 @@
                 <div class="tab-body active" id="tab-body" >
                     <form action="" id="form-body">
                         <select name="company" id="dist-company" required>
-                            <option value="dist-company">Benin Electricity Distribution Company</option>
-                            <option value="dist-company">Abuja Electricity Distribution Company</option>
-                        </select>
-                        <input type="number" name="" id="meter-no" placeholder="Enter Meter Number" pattern="[0-9]{11}" required>
+                            <option value="dist-company" id="abuja-electric">Abuja Electricity Distribution Company (AEDC)</option>
+                            <option value="dist-company" id="ibadan-electric">Ibadan Electricity Distribution Company (IBEDC)</option>
+                            <option value="dist-company" id="jos-electric">Jos Electricity Distribution Company (JEDC)</option>
+                            <option value="dist-company" id="portharcourt-electric">Port Harcourt Electricity Distribution Company (PHED)</option>
+                            <option value="dist-company" id="ikeja-electric">Ikeja Electricity Distribution Company (IKEDC)</option>
+                            <option value="dist-company" id="kaduna-electric">Kaduna Electricity Distribution Company (KAEDECO)</option>
+                            <option value="dist-company" id="kano-electric">Kano Electricity Distribution Company (KEDCO)</option>
+                        </select> 
+                        <input type="number" name="" id="meter-no" placeholder="Enter Meter Number" pattern="[0-9]{13}" required>
                         <input type="tel" name="phone" id="phone" placeholder="Enter Phone number: e.g 08134567890" pattern="[0-9]{11}" required>
                         <div class="form-row">
                             <div class="form-group col-lg-6">
@@ -62,8 +67,8 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <select name="payment" id="payment-option">
-                                    <option value="payment-option"> <i class="far fa-credit-card"></i> Bank Card</option>
-                                    <option value="payment-option">Transfer</option>
+                                    <option value="payment-option" class="optIon"> <i class="far fa-credit-card"></i> Debit Card</option>
+                                    <option value="payment-option" class="optIon">Transfer</option>
                                 </select>
                             </div>
                         </div>
@@ -75,9 +80,15 @@
 
             <div class="tab-body" id="tab-form">
                 <form>
+                    <div id="user-details-entered"></div>
                     <script src="https://checkout.flutterwave.com/v3.js"></script>
-                    <button type="button" onClick="makePayment()">Pay Now</button>
+                    <button type="button" onClick="makePayment()">Checkout</button>
                 </form>
+            </div>
+
+            <div id="payment-details">
+                <div id="successful-payment"></div>
+                <a href="index.html"><button>Done</button></a>
             </div>
         </div>
     </section>
