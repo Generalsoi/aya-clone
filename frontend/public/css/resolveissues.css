@@ -13,7 +13,7 @@
 .issues-content form{
     padding: 3%;
 }
-
+ 
 .issues-content label{
     margin-bottom: 1em;
 }
@@ -47,5 +47,13 @@
 
     .issues-content{
         padding: 7% 2%;
+    }
+
+    .issues-content form input, textarea{
+        height: 4rem;
+    }
+
+    .issues-content button{
+        height: 4rem;
     }
 }

@@ -54,13 +54,16 @@ header{
 }
 
 .nav-ul li a{
-    font-weight: bolder;
     display: inline-block;
     padding: 10px 2rem;
     margin-left: .4rem;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
     color: white;
+}
+
+.nav-ul .active a { 
+    font-weight: bold; 
 }
 
 
@@ -135,6 +138,7 @@ header{
     color: white;
     font-weight: bolder;
     font-size: 55px;
+    margin-bottom: 2rem;
 }
 
 .call-to-action img{
@@ -154,14 +158,14 @@ header{
 @media screen and (max-width: 808px){
     .introductory-section{
         flex-wrap: wrap;
-        padding: 4% 2%
+        padding: 4% 2%;
     }
 
     .call-to-action{
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
     .call-to-action h1{
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .call-to-action img{
@@ -261,10 +265,15 @@ header{
 
     .offers{
         width: 100%;
+        padding: 2rem 1rem;
     }
 
     .energy-img{
         top: 1%;
+    }
+
+    .what-is-new-details button{
+        height: 3rem;
     }
 }
 
@@ -319,6 +328,10 @@ header{
     background-color: #FFFFFF;
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
     -webkit-appearance: none;
+}
+
+#dist-company option{
+    color: #14110F;
 }
 
 #payment-option{
@@ -495,7 +508,7 @@ header{
     };
 
     .failed-transactions-content button{
-        height: 1rem;
+        height: 4rem;
         width: 100%;
     }
 }
@@ -582,6 +595,10 @@ header{
     .footer-content{
         margin-top: 1em;
     }
+
+    .footer-content input, .footer-content button{
+        height: 50px;
+    }
 }
 
 
@@ -589,27 +606,4 @@ header{
 
 
 
-/*******************************/
-/**** successful payment *******/
-/*******************************/
-.successful-payment{
-    padding-top: 7%;
-    height: 100vh;
-    text-align: center;
-    align-items: center;
-}
 
-.successful-payment p{
-    font-size: 3.5rem;
-    font-weight: bold;
-}
-
-.successful-payment button{
-    font-size: 1rem;
-    padding: 2%;
-    border: none;
-    border-radius: 8px;
-    background-color: #2B50AA;
-    color: white;
-    cursor: pointer;
-}
