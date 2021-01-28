@@ -18,7 +18,7 @@
     <!--title--> 
     <title>Aya</title>
 </head>
-<body>
+<body> 
     <header> 
     
         <nav class="aya-nav">
@@ -52,6 +52,7 @@
                 <div class="tab-body active" id="tab-body" >
                     <form action="" id="form-body">
                         <select name="company" id="dist-company" required>
+                            <option>Select your distribution company</option>
                             <option value="dist-company" id="abuja-electric">Abuja Electricity Distribution Company (AEDC)</option>
                             <option value="dist-company" id="ibadan-electric">Ibadan Electricity Distribution Company (IBEDC)</option>
                             <option value="dist-company" id="jos-electric">Jos Electricity Distribution Company (JEDC)</option>
@@ -73,7 +74,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit">PROCEED <i class="fas fa-chevron-right"></i></button>
+                        <button class="proceed-button " type="submit"><span class="proceed-button-text">PROCEED</span> <i class="fas fa-chevron-right"></i></button>
                     </form>
                     
                 </div>
@@ -90,6 +91,11 @@
             <div id="payment-details">
                 <div id="successful-payment"></div>
                 <a href="index.html"><button>Done</button></a>
+            </div>
+
+            <div class="tab-body" id="error-page">
+                <p>Invalid Meter No entered</p>
+                <a href="index.html"><button>Back</button></a>
             </div>
         </div>
     </section>

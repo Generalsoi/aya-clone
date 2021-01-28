@@ -203,7 +203,6 @@ header{
 
 .what-is-new{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -257,6 +256,10 @@ header{
 @media screen and (max-width: 808px){
     .what-we-offer{
         padding: 4% 2%;
+    }
+
+    .what-is-new{
+        flex-wrap: wrap;
     }
 
     .what-is-new-offers{
@@ -324,6 +327,42 @@ header{
     align-items: center;
 }
 
+.proceed-button{
+    position: relative;
+}
+
+.proceed-button-text{
+    transition: all ease 0.5s;
+}
+
+.proceed-button-loading .proceed-button-text{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.proceed-button-loading::after{
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border: 4px solid transparent;
+    border-top-color: #2B50AA;
+    border-radius: 50%;
+    animation: proceed-button-spinner 2s ease infinite
+}
+
+@keyframes proceed-button-spinner{
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 #dist-company{
     background-color: #FFFFFF;
     background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
@@ -344,11 +383,12 @@ header{
     color: #14110F;
 }
 
+
 #tab-form{
     display: none;
 }
 
-#payment-details{
+#payment-details, #error-page{
     display: none;
 }
 
@@ -375,9 +415,14 @@ header{
         width: 100%;
     }
 
+    .tab-body #form-body select{
+        padding: 3px 32px;
+    }
+
     .tab-body .form-group input, .tab-body .form-group select{
         margin: 0;
         width: 100%;
+        padding: 3px 32px;
     }
 
     .form{
@@ -388,6 +433,8 @@ header{
         background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% center;
         background-color: none;
     }
+    
+
     
 }
 

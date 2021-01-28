@@ -9,6 +9,8 @@
 const userMeterDetails = document.getElementById("form-body");
 const checkOut = document.getElementById("tab-form")
 const transactionSuccessful = document.getElementById("payment-details")
+const errorPage = document.getElementById("error-page")
+const btn = document.querySelector(".proceed-button")
 let amount = 0
 let serviceId = ""
 let meterNo = ""
@@ -22,6 +24,8 @@ let transactionRef = ""
 //////////////////////////////////////
 userMeterDetails.addEventListener("submit", async function (e){
     e.preventDefault();
+    btn.classList.toggle("proceed-button-loading")
+
 
     meterNo = document.getElementById("meter-no").value
     const distCompany = document.getElementById("dist-company")
@@ -47,18 +51,30 @@ userMeterDetails.addEventListener("submit", async function (e){
         }
     }).then(data => {
         console.log(data)
-        let customerName = data.content.Customer_Name
-        let address = data.content.Address
-        let meterNumber = data.content.MeterNumber
-        //to render the response from the api endpoint on another div
-        function renderResponse(){
-            const userDetails = document.querySelector("#user-details-entered")
-            userDetails.innerHTML = "Name: " + customerName + "<br> <br> Address: " + address + "<br> <br> Meter Number: " + meterNumber +
-            "<br> <br> Amount: " + amount + "NGN <br> <br>"
-        };
-        renderResponse()
-        userMeterDetails.style.display = "none";
-        checkOut.style.display = "block";
+        if (data.content.error){
+            userMeterDetails.style.display = "none";
+            errorPage.style.display = "block";
+        } else{
+            let customerName = data.content.Customer_Name
+            let address = data.content.Address
+            let meterNumber = data.content.MeterNumber 
+            let meter_Number = data.content.Meter_Number
+            //to render the response from the api endpoint on another div
+            function renderResponse(){
+                const userDetails = document.querySelector("#user-details-entered")
+                if (meterNumber){
+                   userDetails.innerHTML = "Name: " + customerName + "<br><hr> Address: " + address + "<br> <hr> Meter Number: " + meterNumber +
+                    "<br> <hr> Amount: " + amount + " NGN <br> <br>" 
+                } else{
+                    userDetails.innerHTML = "Name: " + customerName + "<br><hr> Address: " + address + "<br> <hr> Meter Number: " + meter_Number +
+                    "<br> <hr> Amount: " + amount + " NGN <br> <br>"
+                }
+                
+            };
+            renderResponse()
+            userMeterDetails.style.display = "none";
+            checkOut.style.display = "block";
+        }
     }).catch (function (error){
         console.error(error);
     })
@@ -155,13 +171,12 @@ function buyPower(){
         return response.json();
     }).then(data => {
         console.log(data)
-        let token = data.billData.Token
-        let unitsPurchased = data.billData.Units
+        let token = data.billData.purchased_code
         function renderData(){
             const transactionStatus = document.querySelector("#successful-payment")
             transactionStatus.innerHTML = "<p>Payment Successful. Transaction details have been sent to your mail</p>"
-            + "<br> <p>Here is your token: </p> <br>" + "Token: " + token + "<br> Units Purchased: " + unitsPurchased 
-            + "<br> <br>"
+            + "<hr> <p>Here is your token: </p> <hr>" + token + "<br> "
+            + " <hr>"
         }
 
         renderData()
