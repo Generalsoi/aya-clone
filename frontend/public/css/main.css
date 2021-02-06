@@ -136,18 +136,9 @@ header{
 
 .call-to-action h1{
     color: white;
-    font-weight: bolder;
-    font-size: 55px;
+    font-weight: 900;
+    font-size: 64px;
     margin-bottom: 2rem;
-}
-
-.call-to-action img{
-    width: 736px;
-    height: 725px;
-    position: absolute;
-    top: 0.5px;
-    left: 2rem;
-    transform: matrix(1, 0, 0, 1, 0, 1);
 }
 
 
@@ -187,16 +178,9 @@ header{
   position: relative;
 }
 
-.energy-img{
-    position: absolute;
-    top: 6%;
-    left: 48%;
-    z-index: 1;
-}
-
 .what-we-offer h5{
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 18px;
     margin-bottom: 56px;
 }
@@ -208,25 +192,29 @@ header{
 }
 
 .what-is-new-details p{
-    font-weight: lighter;
+    font-weight: normal;
     color: #919499;
+    margin-bottom: 24px;
 }
 
 .what-is-new-details h3{
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 24px;
 }
 
 .what-is-new-details button{
     height: 4.375rem;
     width: 12.6875rem;
-    border: 1px solid #919499;
+    border: 1px solid #14110F;
     border-radius: 8px;
     background-color: #FFFFFF;
-    color: #919499;
+    color: #14110F;
+    font-weight: 600;
 }
 
 .what-is-new-details button:hover{
-    background-color: #919499;
+    background-color: #14110F;
     color: white;
 }
 
@@ -236,10 +224,12 @@ header{
     margin-bottom: 1.5rem;
     padding: 2.0625rem 1.875rem;
     border-radius: 10px;
+    background-color: #EDEBE9;
 }
 
 .offers p{
-    margin-top: 0.5rem;
+    margin-top: 8px;
+    margin-bottom: 12px;
     font-size: 14px;
 }
 
@@ -248,10 +238,21 @@ header{
     justify-content: space-between;
 }
 
-.color1{background: linear-gradient(#97ABFF, #123597);}
-.color2{background: linear-gradient(#ABDCFF, #0396FF);}
-.color3{background: linear-gradient(#81FBB8, #28C76F);}
-.color1, .color2, .color3{color: white;}
+.media h4{
+    color: #14110F;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.media img{
+    width: 40px;
+    height: 40px;
+}
+
+.color1:hover{background: linear-gradient(#97ABFF, #123597);} .color1:hover .media h4{color: white;}
+.color2:hover{background: linear-gradient(#ABDCFF, #0396FF);} .color2:hover .media h4{color: white;}
+.color3:hover{background: linear-gradient(#81FBB8, #28C76F);} .color3:hover .media h4{color: white;}
+.color1:hover, .color2:hover, .color3:hover{color: white;}
 
 @media screen and (max-width: 808px){
     .what-we-offer{
@@ -269,10 +270,6 @@ header{
     .offers{
         width: 100%;
         padding: 2rem 1rem;
-    }
-
-    .energy-img{
-        top: 1%;
     }
 
     .what-is-new-details button{
@@ -473,12 +470,10 @@ header{
     align-items: center;
 }
 
-.new-payment-options-list i{
-    margin-bottom: 1rem;
-}
 
 .new-payment-options-list img{
-    width: 12%;
+    width: 24px;
+    height: 24px;
     margin-bottom: 1rem;
 }
 
@@ -504,26 +499,33 @@ header{
 /*** failed transactions ********/
 /********************************/
 .failed-transactions{
-    padding: 4% 10%;
-    position: relative;
+    padding: 4% 15%;
+    text-align: center;
 }
 
-.failed-transactions img{
-    position: absolute;
-    right: 15%;
-    bottom: 10%;
-}
+
 
 .failed-transactions-content{
+    width: 1120px;
+    height: 336px;
+    padding: 55px 252px;
     background: linear-gradient(#FEB692, #EA5455);
-    height: 21rem;
-    padding: 4%;
+    text-align: center;
+    align-items: center;
     color: white;
     border-radius: 10px;
 }
 
 .failed-transactions-content h3{
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.failed-transactions-content p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 34px;
 }
 
 .failed-transactions-content button{
@@ -531,8 +533,10 @@ header{
     border-radius: 10px;
     width: 17.8125rem;
     height: 4.375rem;
-    background-color: #F9D0C8;
+    background-color: rgba(249, 208, 200, 0.42);
     color: white;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .failed-transactions-content button:hover{
@@ -568,7 +572,7 @@ header{
 /******* Footer section **********/
 /*********************************/
 .footer{
-    background-color: #020C27;
+    background-color: black;
     padding: 2% 10%;
     display: flex;
     flex-wrap: wrap;
@@ -593,7 +597,7 @@ header{
 .footer-content ul li{
     list-style-type: none;
     text-indent: 0;
-    margin-bottom: 16px;
+    margin-bottom: 25px;
 }
 
 .footer-content ul li a{
@@ -603,6 +607,12 @@ header{
 
 .footer-social-media{
     display: flex;
+}
+
+.footer-social-media h6{
+    font-size: 24px;
+    font-family: 'Salsa', cursive;
+    font-weight: 400;
 }
 
 .footer-social-media ul li{

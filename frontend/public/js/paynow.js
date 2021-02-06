@@ -63,10 +63,10 @@ userMeterDetails.addEventListener("submit", async function (e){
             function renderResponse(){
                 const userDetails = document.querySelector("#user-details-entered")
                 if (meterNumber){
-                   userDetails.innerHTML = "Name: " + customerName + "<br><hr> Address: " + address + "<br> <hr> Meter Number: " + meterNumber +
+                   userDetails.innerHTML = "<h4>Summary</h4> " + "<hr>" + "Name: " + customerName + "<br><hr> Address: " + address + "<br> <hr> Meter Number: " + meterNumber +
                     "<br> <hr> Amount: " + amount + " NGN <br> <br>" 
                 } else{
-                    userDetails.innerHTML = "Name: " + customerName + "<br><hr> Address: " + address + "<br> <hr> Meter Number: " + meter_Number +
+                    userDetails.innerHTML = "<h4>Summary </h4>" + "<hr>" + "Name: " + customerName + "<br><hr> Address: " + address + "<br> <hr> Meter Number: " + meter_Number +
                     "<br> <hr> Amount: " + amount + " NGN <br> <br>"
                 }
                 
