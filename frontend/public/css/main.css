@@ -93,7 +93,7 @@ header{
         right: 1%;
         clip-path: circle(100px at 90% -20%);
         -webkit-clip-path: circle(100px at 90% -20%);
-        transition: all 0.5s ease-out;
+        transition: all 0.2s ease-out;
         pointer-events: none;
     }
 
@@ -130,10 +130,6 @@ header{
     margin-bottom: 4rem;
 }
 
-.call-to-action{
-    position: relative;
-}
-
 .call-to-action h1{
     color: white;
     font-weight: 900;
@@ -142,25 +138,21 @@ header{
 }
 
 
-.color-grading{
-    color: #8493B6;
-}
 
 @media screen and (max-width: 808px){
     .introductory-section{
         flex-wrap: wrap;
         padding: 4% 2%;
+        text-align: center;
     }
 
     .call-to-action{
+        align-items: center;
         margin-bottom: 2rem;
+        text-align: center;
     }
     .call-to-action h1{
         font-size: 35px;
-    }
-
-    .call-to-action img{
-        display: none;
     }
 }
 
@@ -463,7 +455,6 @@ header{
 
 .new-payment-options-list{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 15% 3.1875rem;
     text-align: center;
@@ -478,17 +469,25 @@ header{
 }
 
 @media screen and (max-width: 808px){
+    .new-payment-options-header h3{
+        font-size: 18px;
+    }
+
+    .new-payment-options-header p{
+        font-size: 14px;
+    }
+    
     .new-payment-options{
         padding: 4% 2%;
     }
 
     .new-payment-options-list{
-        flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: row;
         padding: 0 2% 2%;
     }
 
     .new-payment-options-list p{
+        font-size: 12px;
         margin-bottom: 2rem;
     }
 }
@@ -550,8 +549,17 @@ header{
 
     .failed-transactions-content{
         padding: 3%;
-        height: 24rem;
+        height: 200px;
         width: 100%;
+    }
+
+    .failed-transactions-content h3{
+        font-size: 18px;
+    }
+
+    .failed-transactions-content p{
+        font-size: 14px;
+        margin-bottom: 6px;
     }
 
     .failed-transactions img{
@@ -559,8 +567,9 @@ header{
     };
 
     .failed-transactions-content button{
-        height: 4rem;
+        height: 50px;
         width: 100%;
+        font-size: 16px;
     }
 }
 
