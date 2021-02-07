@@ -275,6 +275,15 @@ header{
     .what-is-new-details button{
         height: 3rem;
     }
+
+    .media h4{
+        color: white;
+    }
+
+    .color1{background: linear-gradient(#97ABFF, #123597);}
+    .color2{background: linear-gradient(#ABDCFF, #0396FF);}
+    .color3{background: linear-gradient(#81FBB8, #28C76F);} 
+    .color1, .color2, .color3{color: white;}
 }
 
 
@@ -552,7 +561,7 @@ header{
 
 @media screen and (max-width: 808px){
     .failed-transactions{
-        padding: 4% 3%;
+        padding: 40px 3%;
     }
 
     .failed-transactions-content{
@@ -576,7 +585,7 @@ header{
 
     .failed-transactions-content button{
         height: 50px;
-        width: 100%;
+        width: 165px;
         font-size: 16px;
     }
 }
