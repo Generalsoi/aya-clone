@@ -48,7 +48,10 @@
     height: 4.375rem;
     background-color: #2B50AA;
     border-radius: 8px;
+    border: none;
     color: white;
+    font-size: 18px;
+    font-weight:700;
 }
 
 .contact form p{

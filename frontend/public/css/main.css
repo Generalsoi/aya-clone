@@ -72,6 +72,7 @@ header{
     nav{
         position: relative;
     }
+
     .aya-nav{
         padding: 1% 2%;
     }
@@ -87,6 +88,7 @@ header{
         position: fixed;
         background-color: #2B50AA;
         height: 100vh;
+        justify-content: stretch;
         flex-direction: column;
         width: 100%;
         top: 7%;
@@ -98,7 +100,11 @@ header{
     }
 
     .nav-ul li {
-        margin: 2rem;
+        margin: 50px;
+    }
+
+    .nav-ul li a{
+        padding: 0;
     }
 
     .nav-ul.show{
@@ -126,6 +132,7 @@ header{
 .introductory-section{
     justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
     padding: 4% 10% 0;
     margin-bottom: 4rem;
 }
@@ -141,14 +148,15 @@ header{
 
 @media screen and (max-width: 808px){
     .introductory-section{
-        flex-wrap: wrap;
-        padding: 4% 2%;
+        padding: 4% 3%;
         text-align: center;
+        width: 100%;
+        flex-direction: column;
     }
 
     .call-to-action{
         align-items: center;
-        margin-bottom: 2rem;
+        margin-bottom: 20px;
         text-align: center;
     }
     .call-to-action h1{
@@ -248,7 +256,7 @@ header{
 
 @media screen and (max-width: 808px){
     .what-we-offer{
-        padding: 4% 2%;
+        padding: 4% 3%;
     }
 
     .what-is-new{
@@ -383,7 +391,11 @@ header{
 
 @media screen and (max-width: 808px){
     .form{
-        padding-top: 2rem;
+        width: 100%;
+        height: 399px;
+        padding-top: 24px;
+        padding-left: 21px;
+        padding-right: 21px;
     }
 
     .tab-header div{
@@ -412,10 +424,6 @@ header{
         margin: 0;
         width: 100%;
         padding: 3px 32px;
-    }
-
-    .form{
-        height: 26.8rem;
     }
 
     #dist-company, #payment-option{
@@ -478,12 +486,12 @@ header{
     }
     
     .new-payment-options{
-        padding: 4% 2%;
+        padding: 4% 3%;
     }
 
     .new-payment-options-list{
         flex-direction: row;
-        padding: 0 2% 2%;
+        padding: 0 3% 2%;
     }
 
     .new-payment-options-list p{
@@ -544,7 +552,7 @@ header{
 
 @media screen and (max-width: 808px){
     .failed-transactions{
-        padding: 4% 2%;
+        padding: 4% 3%;
     }
 
     .failed-transactions-content{
@@ -654,7 +662,7 @@ header{
 
 @media screen and (max-width: 808px){
     .footer{
-        padding: 7% 2% 4%;
+        padding: 7% 3% 4%;
         flex-direction: column;
     }
 

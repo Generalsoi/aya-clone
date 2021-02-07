@@ -12,9 +12,9 @@
     margin-right: 115px;
 }
 
-@media screen and (max-width: 787px){
+@media screen and (max-width: 808px){
     .aboutUsContent{
-        padding: 7% 2%;
+        padding: 7% 3%;
         flex-wrap: wrap;
         width: 100%;
     }
@@ -116,8 +116,9 @@
 
     .new-features{
         flex-wrap: wrap;
+        flex-direction: column-reverse;
         width: 100%;
-        padding: 3% 2%;
+        padding: 3% 3%;
     }
 
     .new-features-content{
